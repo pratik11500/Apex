@@ -244,124 +244,70 @@ h3 {
   text-transform: uppercase;
 }
 
-.box-content a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 15px;
-    margin: 40px 0;
-    color: #24baa5;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: 0.5s;
-    letter-spacing: 4px;
-    overflow: hidden;
-}
+.spinner {
+    margin-top: 10%;
+    margin-left: 20%;
+    background-image: linear-gradient(rgb(186, 66, 255) 35%,rgb(0, 225, 255));
+    width: 150px;
+    height: 150px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 100px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+  }
 
-.box-content a:hover {
-    background: #24baa5;
-    color: #050801;
-    box-shadow: 0 0 5px #24baa5,
-        0 0 25px #24baa5,
-        0 0 50px #24baa5,
-        0 0 200px #24baa5;
-}
+  .spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    filter: blur(10px);
+  }
 
-.box-content a:nth-child(1) {
-    filter: hue-rotate(270deg);
-}
-
-.box-content a:nth-child(2) {
-    filter: hue-rotate(110deg);
-}
-
-.box-content a span {
-    position: absolute;
-    display: block;
-}
-
-.box-content a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #24baa5);
-    animation: animate1 1s linear infinite;
-}
-
-@keyframes animate1 {
-    0% {
-        left: -100%;
+  @keyframes spinning82341 {
+    to {
+      transform: rotate(360deg);
     }
+  }
 
-    50%,
-    100% {
-        left: 100%;
-    }
+.box-content button {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 40px 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  position: relative;
+  background: #100720;
+  transition: 0.1s;
+  box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
 }
 
-.box-content a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,
-            transparent, #24baa5);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
+.box-content button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+  filter: blur(15px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-@keyframes animate2 {
-    0% {
-        top: -100%;
-    }
-
-    50%,
-    100% {
-        top: 100%;
-    }
+.box-content button:hover {
+  transform: scale(1.1);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(186, 66, 255, 1) 17.8%, rgba(0, 225, 255, 1) 100.2%);
+  transition: 0.5s;
 }
 
-.box-content a span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #24baa5);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-    0% {
-        right: -100%;
-    }
-
-    50%,
-    100% {
-        right: 100%;
-    }
-}
-
-
-.box-content a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #24baa5);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-
-@keyframes animate4 {
-    0% {
-        bottom: -100%;
-    }
-
-    50%,
-    100% {
-        bottom: 100%;
-    }
+.box-content button:active {
+  transform: scale(0.9);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1) 100.2%);
+  transition: 0.5s;
 }
 
 #contact {
